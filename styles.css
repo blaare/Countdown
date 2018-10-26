@@ -41,6 +41,10 @@ body{
 
 }
 
+.countdown-box:hover{
+    opacity: .7;
+    background-color: rgba(255, 0, 0, 0.53);
+}
 
 #plus{
     text-align:center;

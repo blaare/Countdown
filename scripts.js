@@ -45,8 +45,8 @@ function createCountDownDates() {
     for (var i = 0; i < countDownDates.length; i++) {
         let currentTimer = "timer-" + i;
         $(document.body).append(
-            `<div class="jumbotron">
-                <h1 class="display-4" id="${currentTimer}"></h1>
+            `<div class="jumbotron countdown-box">
+                <h1 class="display-4 " id="${currentTimer}"></h1>
                 <p class="lead"> ${countDownDates[i].key} </p>
             </div>`);
    }
@@ -179,8 +179,24 @@ function getCookie(cname) {
  * @returns {boolean}
  */
 function checkCookie(cookieName) {
-    return getCookie(cookieName) !== "";
+    return getCookie(cookieName) !== "" && getCookie(cookieName) !== "[]";
+}
 
+$(".countdown-box").on("click", function(event){
+   event.preventDefault();
+   removeElement($(this).find(".lead").html().trim());
+   $(this).remove();
+});
+
+function removeElement(lead){
+    for(var i = 0; i < countDownDates.length; i++){
+        console.log(countDownDates[i].key.trim());
+        if(lead === countDownDates[i].key){
+            countDownDates.splice(i,1);
+            setCookie("timers", JSON.stringify(countDownDates));
+            return;
+        }
+    }
 
 }
 
