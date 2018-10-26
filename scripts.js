@@ -1,7 +1,7 @@
 let countDownDates = [];
 
 
-!checkCookie("timers") ? beenHereBefore() : firstTimeVisit();
+checkCookie("timers") ? beenHereBefore() : firstTimeVisit();
 
 createCountDownDates();
 let currentIntervals = createIntervals();
@@ -63,13 +63,24 @@ function createIntervals(){
         console.log("setting interval");
         for(var i = 0; i < countDownDates.length; i++) {
             let distance = countDownDates[i].val - now;
+
             let days = Math.floor(distance / (1000 * 60 * 60 * 24));
             let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            //htmlstring
-            let htmlstring = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            var htmlstring = "";
+            if (distance < 0) {
+                days *= -1;
+                hours *= -1;
+                minutes *= -1;
+                seconds *= -1;
+                htmlstring = days + "d " + hours + "h " + minutes + "m " + seconds + "s  (Since)";
+            } else {
+                htmlstring = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }
+
+
             let currentTimer = "#timer-"+i;
             let $timer = $(currentTimer);
 
@@ -80,6 +91,9 @@ function createIntervals(){
     }, 1000);
 }
 
+/**
+ * Displays the add div
+ */
 $("#add-one").on("click", function(event){
     //make sure form  doesn't  submit
     event.preventDefault();
@@ -92,6 +106,9 @@ $("#add-one").on("click", function(event){
 
 });
 
+/**
+ * Handles adding timers
+ */
 $("#add-new-timer").submit(function(event){
     event.preventDefault();
     countDownDates.push({
@@ -110,20 +127,36 @@ $("#add-new-timer").submit(function(event){
     clearInterval(currentIntervals);
     currentIntervals = createIntervals();
     setCookie("timers", JSON.stringify(countDownDates));
+    $("#add-new-timer").css({display:"none"});
 
 
 });
 
+/**
+ * handles the close button
+ */
 $("#close-form").on("click", function(event){
     event.preventDefault();
     $("#add-new-timer").css({display:"none"});
 });
 
 //COOKIE HANDLING
+/**
+ * Function setCookie
+ * Goal:    allow the setting of a cookie
+ * @param cname
+ * @param cvalue
+ */
 function setCookie(cname, cvalue, ) {
     document.cookie = cname + "=" + cvalue + ";" + "path=/";
 }
 
+/**
+ * Function getCookie
+ * Goal:    allow retrieval of a cookie
+ * @param cname
+ * @returns {string}
+ */
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -139,6 +172,12 @@ function getCookie(cname) {
     return "";
 }
 
+/**
+ * Function checkCookie
+ * Goal:    checks the status of a cookie
+ * @param cookieName
+ * @returns {boolean}
+ */
 function checkCookie(cookieName) {
     return getCookie(cookieName) !== "";
 
