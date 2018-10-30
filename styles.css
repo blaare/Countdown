@@ -23,11 +23,12 @@ body{
 #add-new-timer{
     display:none;
     position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
     z-index: 9;
-    background-color: white;
+    background-color: rgba(68, 147, 23, 0.43);
     height: 300px;
     width: 300px;
     text-align:center;

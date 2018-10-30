@@ -102,11 +102,16 @@ function createIntervals(){
 $("#add-one").on("click", function(event){
     //make sure form  doesn't  submit
     event.preventDefault();
+    console.log("adding new timer");
 
     $("#add-new-timer").toggle(function () {
-        $("#add-new-timer").css({display:"block"});
+        //$("#add-new-timer").css({display:"inline"});
+        $("#add-one").html("x");
+        $("#add-one").css("background-color", "rgba(147, 36, 41, 0.43)");
     }, function () {
-        $("#add-new-timer").css({display:"none"});
+        //$("#add-new-timer").css({display:"none"});
+        $("#add-one").html("+");
+        $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
     });
 
 });
