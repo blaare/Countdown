@@ -27,7 +27,7 @@ function firstTimeVisit() {
         key: "Until Next Month",
         val: current.getTime()
     });
-    setCookie("timers", JSON.stringify(countDownDates));
+    setCookie("timers", JSON.stringify(countDownDates), 42000);
 
 }
 
@@ -131,7 +131,7 @@ $("#add-new-timer").submit(function(event){
 
     clearInterval(currentIntervals);
     currentIntervals = createIntervals();
-    setCookie("timers", JSON.stringify(countDownDates));
+    setCookie("timers", JSON.stringify(countDownDates), 42000);
     $("#add-new-timer").css({display:"none"});
 
 
@@ -146,22 +146,13 @@ $("#close-form").on("click", function(event){
 });
 
 //COOKIE HANDLING
-/**
- * Function setCookie
- * Goal:    allow the setting of a cookie
- * @param cname
- * @param cvalue
- */
-function setCookie(cname, cvalue, ) {
-    document.cookie = cname + "=" + cvalue + ";" + "path=/";
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-/**
- * Function getCookie
- * Goal:    allow retrieval of a cookie
- * @param cname
- * @returns {string}
- */
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -176,6 +167,7 @@ function getCookie(cname) {
     }
     return "";
 }
+
 
 /**
  * Function checkCookie
@@ -198,7 +190,7 @@ function removeElement(lead){
         console.log(countDownDates[i].key.trim());
         if(lead === countDownDates[i].key){
             countDownDates.splice(i,1);
-            setCookie("timers", JSON.stringify(countDownDates));
+            setCookie("timers", JSON.stringify(countDownDates),40000);
             return;
         }
     }
