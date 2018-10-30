@@ -105,12 +105,12 @@ $("#add-one").on("click", function(event){
     console.log("adding new timer");
 
     $("#add-new-timer").toggle(function () {
-        //$("#add-new-timer").css({display:"inline"});
-        $("#add-one").html("x");
+        $("#add-new-timer").css({display:"inline"});
+        $("#plus").html("x");
         $("#add-one").css("background-color", "rgba(147, 36, 41, 0.43)");
     }, function () {
-        //$("#add-new-timer").css({display:"none"});
-        $("#add-one").html("+");
+        $("#add-new-timer").css({display:"none"});
+        $("#plus").html("+");
         $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
     });
 
