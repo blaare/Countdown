@@ -1,7 +1,10 @@
-let countDownDates = [];
+var countDownDates = [];
 
-
-checkCookie("timers") ? beenHereBefore() : firstTimeVisit();
+if(checkCookie("timers")){
+    beenHereBefore();
+} else {
+    firstTimeVisit();
+}
 
 createCountDownDates();
 let currentIntervals = createIntervals();
