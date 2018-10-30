@@ -124,7 +124,7 @@ $("#add-new-timer").submit(function(event){
     var currentTimer = `timer-${countDownDates.length-1}`;
     console.log(currentTimer);
     $(document.body).append(
-        `<div class="jumbotron">
+        `<div class="jumbotron countdown-box">
             <h1 class="display-4" id="${currentTimer}"></h1>
             <p class="lead"> ${countDownDates[countDownDates.length-1].key}</p>
         </div>`);
