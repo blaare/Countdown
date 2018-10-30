@@ -6,6 +6,8 @@ if(checkCookie("timers")){
     firstTimeVisit();
 }
 
+console.log(getCookie("timers"));
+
 createCountDownDates();
 let currentIntervals = createIntervals();
 
