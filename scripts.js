@@ -96,6 +96,8 @@ function createIntervals(){
     }, 1000);
 }
 
+
+let display = true;
 /**
  * Displays the add div
  */
@@ -104,15 +106,18 @@ $("#add-one").on("click", function(event){
     event.preventDefault();
     console.log("adding new timer");
 
-    $("#add-new-timer").toggle(function () {
+    if(display){
         $("#add-new-timer").css({display:"inline"});
-        $("#plus").html("x");
         $("#add-one").css("background-color", "rgba(147, 36, 41, 0.43)");
-    }, function () {
+        $("#plus").css("transform", "rotate(45deg)");
+        display = false;
+    } else {
         $("#add-new-timer").css({display:"none"});
-        $("#plus").html("+");
+        $("#plus").css("transform", "");
         $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
-    });
+        display = true;
+    }
+
 
 });
 
