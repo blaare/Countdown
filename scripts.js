@@ -156,6 +156,9 @@ $("#add-new-timer").submit(function(event){
 $("#close-form").on("click", function(event){
     event.preventDefault();
     $("#add-new-timer").css({display:"none"});
+    $("#plus").css("transform", "");
+    $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
+    display = true;
 });
 
 //COOKIE HANDLING
