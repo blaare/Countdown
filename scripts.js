@@ -107,15 +107,9 @@ $("#add-one").on("click", function(event){
     console.log("adding new timer");
 
     if(display){
-        $("#add-new-timer").css({display:"inline"});
-        $("#add-one").css("background-color", "rgba(147, 36, 41, 0.43)");
-        $("#plus").css("transform", "rotate(45deg)");
-        display = false;
+        showInputForm();
     } else {
-        $("#add-new-timer").css({display:"none"});
-        $("#plus").css("transform", "");
-        $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
-        display = true;
+        hideInputForm();
     }
 
 
@@ -142,10 +136,7 @@ $("#add-new-timer").submit(function(event){
     clearInterval(currentIntervals);
     currentIntervals = createIntervals();
     setCookie("timers", JSON.stringify(countDownDates), 42000);
-    $("#add-new-timer").css({display:"none"});
-    $("#plus").css("transform", "");
-    $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
-    display = true;
+    hideInputForm();
 
 
 });
@@ -155,10 +146,7 @@ $("#add-new-timer").submit(function(event){
  */
 $("#close-form").on("click", function(event){
     event.preventDefault();
-    $("#add-new-timer").css({display:"none"});
-    $("#plus").css("transform", "");
-    $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
-    display = true;
+    hideInputForm();
 });
 
 //COOKIE HANDLING
@@ -184,7 +172,6 @@ function getCookie(cname) {
     return "";
 }
 
-
 /**
  * Function checkCookie
  * Goal:    checks the status of a cookie
@@ -199,6 +186,7 @@ $(".countdown-box").on("click", function(event){
    event.preventDefault();
    removeElement($(this).find(".lead").html().trim());
    $(this).remove();
+
 });
 
 function removeElement(lead){
@@ -211,5 +199,27 @@ function removeElement(lead){
         }
     }
 
+}
+
+/**
+ * Function showInputForm
+ * Goal:    to display the input form
+ */
+function showInputForm(){
+    $("#add-new-timer").css({display:"inline"});
+    $("#add-one").css("background-color", "rgba(147, 36, 41, 0.43)");
+    $("#plus").css("transform", "rotate(45deg)");
+    display = false;
+}
+
+/**
+ * Function hideInputForm
+ * Goal:    to hide the input form
+ */
+function hideInputForm(){
+    $("#add-new-timer").css({display:"none"});
+    $("#plus").css("transform", "");
+    $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
+    display = true;
 }
 
