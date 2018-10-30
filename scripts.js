@@ -143,6 +143,9 @@ $("#add-new-timer").submit(function(event){
     currentIntervals = createIntervals();
     setCookie("timers", JSON.stringify(countDownDates), 42000);
     $("#add-new-timer").css({display:"none"});
+    $("#plus").css("transform", "");
+    $("#add-one").css("background-color", "rgba(68, 147, 23, 0.43)");
+    display = true;
 
 
 });
