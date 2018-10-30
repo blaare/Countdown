@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbcadd5-cc2c-4f04-984f-c39bd610e559" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,14 +40,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="704" />
-          <entry key="html" value="711" />
+          <entry key="html" value="714" />
           <entry key="js" value="5267" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="704" />
-          <entry key="HTML" value="721" />
+          <entry key="HTML" value="724" />
           <entry key="JavaScript" value="5257" />
         </counts>
       </usages-collector>
@@ -57,36 +57,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="230">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <state relative-caret-position="173">
+              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc;n#firstTimeVisit#0" />
                 <element signature="n#!!block;n#firstTimeVisit#0" />
                 <element signature="n#!!doc;n#beenHereBefore#0" />
                 <element signature="n#!!block;n#beenHereBefore#0" />
                 <element signature="n#!!doc;n#createCountDownDates#0" />
-                <element signature="n#!!block;n#createCountDownDates#0" />
                 <element signature="n#!!doc;n#createIntervals#0" />
                 <element signature="n#!!block;n#createIntervals#0" />
                 <element signature="e#2710#2741#0" />
                 <element signature="e#2783#3031#0" />
                 <element signature="e#3110#3805#0" />
                 <element signature="n#!!doc;n#setCookie#0" />
+                <element signature="n#!!block;n#setCookie#0" />
                 <element signature="n#!!doc;n#getCookie#0" />
                 <element signature="n#!!block;n#getCookie#0" />
                 <element signature="n#!!doc;n#checkCookie#0" />
+                <element signature="n#!!block;n#checkCookie#0" />
+                <element signature="e#4945#5051#0" />
                 <element signature="n#!!block;n#removeElement#0" />
               </folding>
             </state>
@@ -114,6 +116,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>console.log</find>
+      <find>&lt;i&gt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,9 +125,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles.css" />
         <option value="$PROJECT_DIR$/scripts.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -193,12 +196,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540553622934</updated>
       <workItem from="1540553624156" duration="9344000" />
-      <workItem from="1540924235679" duration="233000" />
+      <workItem from="1540924235679" duration="381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9580000" />
+    <option name="totallyTimeSpent" value="9728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="927" height="1055" extended-state="4" />
@@ -230,13 +233,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -246,26 +242,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="173">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc;n#firstTimeVisit#0" />
             <element signature="n#!!block;n#firstTimeVisit#0" />
             <element signature="n#!!doc;n#beenHereBefore#0" />
             <element signature="n#!!block;n#beenHereBefore#0" />
             <element signature="n#!!doc;n#createCountDownDates#0" />
-            <element signature="n#!!block;n#createCountDownDates#0" />
             <element signature="n#!!doc;n#createIntervals#0" />
             <element signature="n#!!block;n#createIntervals#0" />
             <element signature="e#2710#2741#0" />
             <element signature="e#2783#3031#0" />
             <element signature="e#3110#3805#0" />
             <element signature="n#!!doc;n#setCookie#0" />
+            <element signature="n#!!block;n#setCookie#0" />
             <element signature="n#!!doc;n#getCookie#0" />
             <element signature="n#!!block;n#getCookie#0" />
             <element signature="n#!!doc;n#checkCookie#0" />
+            <element signature="n#!!block;n#checkCookie#0" />
+            <element signature="e#4945#5051#0" />
             <element signature="n#!!block;n#removeElement#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
